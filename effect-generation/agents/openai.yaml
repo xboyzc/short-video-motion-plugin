@@ -1,0 +1,4 @@
+interface:
+  display_name: "特效生成"
+  short_description: "根据SRT时间轴生成严格适配Overlay Studio的动效卡片JSON"
+  default_prompt: "使用 $effect-generation 读取我提供的 SRT，并只用现有卡片库生成可导入 Overlay Studio 的 overlay JSON。"
