@@ -17,16 +17,16 @@
 
 ```bash
 python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo xboyzc/短视频动效插件 \
+  --repo xboyzc/short-video-motion-plugin \
   --path effect-generation
 ```
 
 也可以手动安装：
 
 ```bash
-git clone https://github.com/xboyzc/短视频动效插件.git
+git clone https://github.com/xboyzc/short-video-motion-plugin.git
 mkdir -p "$HOME/.codex/skills"
-cp -R 短视频动效插件/effect-generation "$HOME/.codex/skills/effect-generation"
+cp -R short-video-motion-plugin/effect-generation "$HOME/.codex/skills/effect-generation"
 ```
 
 安装后新建一个 Codex 任务，让 Skill 被重新发现。
