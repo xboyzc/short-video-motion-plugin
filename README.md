@@ -1,4 +1,4 @@
-# Overlay Studio 特效生成 Skill
+# 短视频动效插件
 
 把 SRT 字幕自动整理成经过校验的 Overlay Studio 动效卡片 JSON。Skill 会读取字幕内容和毫秒级时间轴，从固定的五种现有卡片中选择合适类型，不创建自定义组件，也不会把整份字幕机械地塞进卡片。
 
@@ -17,16 +17,16 @@
 
 ```bash
 python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo xboyzc/overlay-studio-effect-generation-skill \
+  --repo xboyzc/短视频动效插件 \
   --path effect-generation
 ```
 
 也可以手动安装：
 
 ```bash
-git clone https://github.com/xboyzc/overlay-studio-effect-generation-skill.git
+git clone https://github.com/xboyzc/短视频动效插件.git
 mkdir -p "$HOME/.codex/skills"
-cp -R overlay-studio-effect-generation-skill/effect-generation "$HOME/.codex/skills/effect-generation"
+cp -R 短视频动效插件/effect-generation "$HOME/.codex/skills/effect-generation"
 ```
 
 安装后新建一个 Codex 任务，让 Skill 被重新发现。
