@@ -1,5 +1,7 @@
 [CmdletBinding()]
-param()
+param(
+    [switch]$NoBrowser
+)
 
 $ErrorActionPreference = "Stop"
 
@@ -117,7 +119,9 @@ if (Test-Path $PortFile) {
     if ($savedPort -gt 0 -and (Test-MotionServer -Port $savedPort)) {
         $serverUrl = "http://${ServerHost}:$savedPort/"
         Write-Host "Motion Playground is already running: $serverUrl"
-        Start-Process $serverUrl
+        if (-not $NoBrowser) {
+            Start-Process $serverUrl
+        }
         exit 0
     }
 }
@@ -127,7 +131,9 @@ foreach ($existingPort in 4173..4183) {
         Set-Content -Path $PortFile -Value $existingPort -Encoding ASCII
         $serverUrl = "http://${ServerHost}:$existingPort/"
         Write-Host "Motion Playground is already running: $serverUrl"
-        Start-Process $serverUrl
+        if (-not $NoBrowser) {
+            Start-Process $serverUrl
+        }
         exit 0
     }
 }
@@ -189,5 +195,7 @@ if (-not $serverReady) {
 $serverUrl = "http://${ServerHost}:$serverPort/"
 Write-Host "Motion Playground started: $serverUrl"
 Write-Host "Transparent exports: $ExportsDir"
-Start-Process $serverUrl
+if (-not $NoBrowser) {
+    Start-Process $serverUrl
+}
 exit 0

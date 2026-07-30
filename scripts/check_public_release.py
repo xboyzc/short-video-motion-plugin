@@ -21,6 +21,18 @@ PRIVATE_SUFFIXES = {
     ".mov",
     ".m4v",
     ".webm",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".webp",
+    ".wav",
+    ".mp3",
+    ".m4a",
+    ".aac",
+    ".zip",
+    ".7z",
+    ".rar",
 }
 FORBIDDEN_TEXT = (
     "/Users/" + "a001",

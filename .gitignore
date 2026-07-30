@@ -1,6 +1,11 @@
 .DS_Store
 __pycache__/
 *.pyc
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
 motion-playground/node_modules/
 motion-playground/.local-runtime/
 motion-playground/exports/
@@ -10,3 +15,15 @@ motion-playground/exports/
 *.mov
 *.m4v
 *.webm
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.zip
+*.7z
+*.rar

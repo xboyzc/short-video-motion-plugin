@@ -37,6 +37,7 @@ def main() -> None:
         "py.exe",
         "python.exe",
         "Start-Process $serverUrl",
+        "[switch]$NoBrowser",
         "motion-playground-export-server",
     )
     stop_ps1 = require_text(
