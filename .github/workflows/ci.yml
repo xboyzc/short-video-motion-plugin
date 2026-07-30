@@ -1,0 +1,69 @@
+name: Cross-platform validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    defaults:
+      run:
+        working-directory: motion-playground
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install web dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type-check and test editor
+        shell: bash
+        run: |
+          pnpm typecheck
+          pnpm test:safety
+          pnpm test:layout
+          pnpm test:catalog
+          pnpm test:import
+
+      - name: Test Windows launch package
+        run: python scripts/test_windows_compat.py
+
+      - name: Test SRT generation Skill
+        shell: bash
+        run: |
+          python skills/effect-generation/scripts/test_validator.py
+          python skills/effect-generation/scripts/test_generator.py
+
+      - name: Build production HTML
+        run: pnpm build
+
+      - name: Check public package
+        working-directory: .
+        run: python scripts/check_public_release.py

@@ -1,0 +1,226 @@
+{
+  "version": 2,
+  "effects": {
+    "metric-focus": {
+      "presets": [[7.3, 28.0, 22.5, 94]],
+      "legacyPresets": [[7.3, 30.0, 22.5, 124]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["label", "value", "suffix", "detail"],
+        "limits": {"label": 42, "suffix": 6, "detail": 42},
+        "required": ["label", "detail"],
+        "numeric": ["value"]
+      }
+    },
+    "compare-split": {
+      "presets": [[4.5, 31.0, 91.0, 39]],
+      "legacyPresets": [[4.5, 35.0, 91.0, 38]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["title", "leftLabel", "leftValue", "rightLabel", "rightValue"],
+        "limits": {"title": 18, "leftLabel": 10, "leftValue": 18, "rightLabel": 10, "rightValue": 18},
+        "required": ["title", "leftLabel", "leftValue", "rightLabel", "rightValue"],
+        "numeric": []
+      }
+    },
+    "quote-lockup": {
+      "presets": [[5.8, 18.0, 25.8, 27]],
+      "legacyPresets": [[5.8, 22.0, 27.0, 32]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "quote", "source"],
+        "limits": {"kicker": 42, "quote": 72, "source": 42},
+        "required": ["kicker", "quote"],
+        "numeric": []
+      }
+    },
+    "signal-card": {
+      "presets": [[4.6, 8.0, 25.8, 21], [69.6, 8.0, 25.8, 21]],
+      "legacyPresets": [[4.6, 23.5, 27.2, 31], [68.2, 23.5, 27.2, 31]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "line1", "line2", "line3", "footer"],
+        "limits": {"kicker": 24, "line1": 16, "line2": 16, "line3": 16, "footer": 24},
+        "required": ["kicker", "line1", "line2"],
+        "numeric": []
+      }
+    },
+    "picture-in-picture": {
+      "presets": [[4.6, 10.0, 25.8, 21], [69.6, 10.0, 25.8, 21]],
+      "legacyPresets": [[4.6, 18.0, 27.5, 21], [67.9, 18.0, 27.5, 21]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "main-video",
+      "content": {
+        "keys": ["label", "title", "caption"],
+        "limits": {"label": 22, "title": 42, "caption": 72},
+        "required": ["label", "title"],
+        "numeric": []
+      }
+    },
+    "image-feature": {
+      "presets": [[4.7, 10.0, 25.5, 21], [69.8, 10.0, 25.5, 21]],
+      "legacyPresets": [[4.7, 17.0, 26.5, 23], [68.8, 17.0, 26.5, 23]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "image",
+      "content": {
+        "keys": ["label", "title", "caption"],
+        "limits": {"label": 22, "title": 42, "caption": 72},
+        "required": ["label", "title"],
+        "numeric": []
+      }
+    },
+    "kinetic-text": {
+      "presets": [[4.5, 12.0, 25.8, 29], [69.7, 12.0, 25.8, 29]],
+      "legacyPresets": [[4.5, 19.0, 27.0, 54], [68.5, 19.0, 27.0, 54]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "line1", "line2", "line3"],
+        "limits": {"kicker": 22, "line1": 12, "line2": 12, "line3": 12},
+        "required": ["kicker", "line1"],
+        "numeric": []
+      }
+    },
+    "proof-frame": {
+      "presets": [[4.2, 7.0, 27.2, 60]],
+      "legacyPresets": [[4.2, 10.0, 27.0, 70]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "image",
+      "content": {
+        "keys": ["kicker", "title", "value", "unit", "caption"],
+        "limits": {"kicker": 24, "title": 42, "value": 24, "unit": 24, "caption": 42},
+        "required": ["kicker", "title", "value"],
+        "numeric": []
+      }
+    },
+    "dual-proof": {
+      "presets": [[4.0, 6.0, 27.5, 17]],
+      "legacyPresets": [[4.0, 11.0, 27.5, 23]],
+      "maxCues": 3,
+      "maxDuration": 10,
+      "media": "image",
+      "content": {
+        "keys": ["kicker", "title", "leftValue", "rightValue", "caption"],
+        "limits": {"kicker": 24, "title": 42, "leftValue": 24, "rightValue": 24, "caption": 42},
+        "required": ["kicker", "title", "leftValue", "rightValue"],
+        "numeric": []
+      }
+    },
+    "process-chain": {
+      "presets": [[3.8, 7.0, 26.4, 20]],
+      "legacyPresets": [[3.8, 18.0, 28.0, 23]],
+      "maxCues": 4,
+      "maxDuration": 15,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "title", "line1", "line2", "line3", "line4", "caption"],
+        "limits": {"kicker": 24, "title": 42, "line1": 16, "line2": 16, "line3": 16, "line4": 16, "caption": 42},
+        "required": ["kicker", "title", "line1", "line2", "line3", "line4"],
+        "numeric": []
+      }
+    },
+    "insight-grid": {
+      "presets": [[4.0, 7.0, 26.0, 20]],
+      "legacyPresets": [[4.0, 12.0, 27.5, 23]],
+      "maxCues": 4,
+      "maxDuration": 15,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "title", "line1", "line2", "line3", "line4", "caption"],
+        "limits": {"kicker": 24, "title": 42, "line1": 16, "line2": 16, "line3": 16, "line4": 16, "caption": 42},
+        "required": ["kicker", "title", "line1", "line2", "line3", "line4"],
+        "numeric": []
+      }
+    },
+    "chapter-callout": {
+      "presets": [[4.2, 15.0, 26.0, 28]],
+      "legacyPresets": [[4.2, 17.0, 25.5, 32]],
+      "maxCues": 2,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "index", "title", "detail"],
+        "limits": {"kicker": 24, "index": 8, "title": 42, "detail": 72},
+        "required": ["kicker", "index", "title"],
+        "numeric": []
+      }
+    },
+    "icon-breath": {
+      "presets": [[4.0, 12.0, 26.0, 26], [70.0, 12.0, 26.0, 26]],
+      "legacyPresets": [[4.0, 19.0, 25.0, 25], [71.0, 19.0, 25.0, 25]],
+      "maxCues": 2,
+      "maxDuration": 10,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "title", "detail"],
+        "limits": {"kicker": 24, "title": 42, "detail": 72},
+        "required": ["kicker", "title"],
+        "numeric": []
+      }
+    },
+    "data-bars": {
+      "presets": [[3.0, 7.0, 28.0, 13], [69.0, 7.0, 28.0, 13]],
+      "legacyPresets": [[3.0, 16.0, 28.0, 25], [69.0, 16.0, 28.0, 25]],
+      "maxCues": 4,
+      "maxDuration": 15,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "title", "label1", "value1", "label2", "value2", "label3", "value3", "label4", "value4"],
+        "limits": {"kicker": 24, "title": 42, "label1": 16, "value1": 12, "label2": 16, "value2": 12, "label3": 16, "value3": 12, "label4": 16, "value4": 12},
+        "required": ["kicker", "title", "label1", "value1", "label2", "value2", "label3", "value3", "label4", "value4"],
+        "numeric": []
+      }
+    },
+    "step-rail": {
+      "presets": [[4.0, 7.0, 25.6, 20], [70.4, 7.0, 25.6, 20]],
+      "legacyPresets": [[4.0, 14.0, 27.0, 25], [69.0, 14.0, 27.0, 25]],
+      "maxCues": 3,
+      "maxDuration": 12,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "title", "line1", "line2", "line3", "caption"],
+        "limits": {"kicker": 24, "title": 42, "line1": 16, "line2": 16, "line3": 16, "caption": 42},
+        "required": ["kicker", "title", "line1", "line2", "line3"],
+        "numeric": []
+      }
+    },
+    "code-window": {
+      "presets": [[1.5, 5.0, 30.0, 12], [68.5, 5.0, 30.0, 12]],
+      "legacyPresets": [[1.5, 8.0, 30.0, 25], [68.5, 8.0, 30.0, 25]],
+      "maxCues": 4,
+      "maxDuration": 15,
+      "media": "image",
+      "content": {
+        "keys": ["kicker", "title", "line1", "line2", "line3", "line4", "caption"],
+        "limits": {"kicker": 24, "title": 42, "line1": 16, "line2": 16, "line3": 16, "line4": 16, "caption": 42},
+        "required": ["kicker", "title", "line1", "line2"],
+        "numeric": []
+      }
+    },
+    "module-grid": {
+      "presets": [[3.0, 6.0, 28.0, 11], [69.0, 6.0, 28.0, 11]],
+      "legacyPresets": [[3.0, 12.0, 28.0, 25], [69.0, 12.0, 28.0, 25]],
+      "maxCues": 8,
+      "maxDuration": 15,
+      "media": "none",
+      "content": {
+        "keys": ["kicker", "title", "module1", "module2", "module3", "module4", "module5", "module6", "module7", "module8", "caption"],
+        "limits": {"kicker": 24, "title": 42, "module1": 16, "module2": 16, "module3": 16, "module4": 16, "module5": 16, "module6": 16, "module7": 16, "module8": 16, "caption": 42},
+        "required": ["kicker", "title", "module1", "module2", "module3", "module4", "module5", "module6", "module7", "module8"],
+        "numeric": []
+      }
+    }
+  }
+}

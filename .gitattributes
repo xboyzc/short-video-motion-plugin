@@ -1,0 +1,12 @@
+* text=auto
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.command text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.png binary
+*.jpg binary
+*.mov binary

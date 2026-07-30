@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+*.local
+.local-runtime/
+exports/
+__pycache__/
+*.pyc
+*.srt
+*.overlay.json
+*.mp4
+*.mov
+*.m4v
+*.webm
